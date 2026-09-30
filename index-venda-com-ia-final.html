@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Venda com IA — guia prático para estruturar produto, oferta, página, anúncios e atendimento com Inteligência Artificial.">
+<meta name="theme-color" content="#070b14">
+<title>Venda com IA — Edição 2026</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,Arial,Helvetica,sans-serif;
+  background:#070b14;
+  color:#f7f9fc;
+  line-height:1.55;
+  -webkit-text-size-adjust:100%;
+}
+a{color:inherit}
+.container{width:min(1080px,100%);margin:auto;padding:0 20px}
+.hero{
+  text-align:center;
+  padding:54px 20px 46px;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(38,105,255,.20),transparent 42%),
+    #070b14;
+}
+.badge{
+  display:inline-block;
+  background:#14284d;
+  color:#59c9ff;
+  border:1px solid #21477b;
+  padding:9px 17px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:14px;
+  letter-spacing:.3px;
+}
+h1{
+  font-size:clamp(44px,9vw,78px);
+  line-height:1.02;
+  margin:24px 0 14px;
+  letter-spacing:-2px;
+}
+.hero h2{
+  font-size:clamp(20px,4vw,31px);
+  line-height:1.25;
+  font-weight:500;
+  color:#d9e0ec;
+  max-width:850px;
+  margin:0 auto;
+}
+.hero p{
+  font-size:18px;
+  color:#aeb9ca;
+  max-width:780px;
+  margin:22px auto 28px;
+}
+.cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:58px;
+  padding:16px 28px;
+  border-radius:13px;
+  background:#20d568;
+  color:#031108;
+  text-decoration:none;
+  font-weight:900;
+  font-size:18px;
+  border:0;
+  cursor:pointer;
+  box-shadow:0 12px 30px rgba(32,213,104,.18);
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
+  transition:transform .15s ease,filter .15s ease;
+}
+.cta:active{transform:scale(.98)}
+.cta:hover{filter:brightness(1.05)}
+.note{
+  font-size:13px;
+  color:#7f8b9f;
+  max-width:700px;
+  margin:14px auto 0;
+}
+.trust{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin:25px auto 0;
+  max-width:760px;
+}
+.trust span{
+  font-size:13px;
+  color:#b9c3d2;
+  border:1px solid #1e2a3e;
+  background:#0c1320;
+  padding:8px 12px;
+  border-radius:999px;
+}
+section{
+  background:#101827;
+  border:1px solid #1d2a40;
+  border-radius:24px;
+  padding:38px;
+  margin:22px 0;
+}
+section h2{
+  font-size:clamp(27px,5vw,38px);
+  line-height:1.15;
+  margin:0 0 24px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+.card{
+  border:1px solid #1d2a40;
+  border-radius:17px;
+  padding:22px;
+  background:#0c1422;
+}
+.card h3{margin:0 0 7px;font-size:18px}
+.card p{margin:0;color:#b9c2d1}
+.checklist{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:12px;
+}
+.checklist li{
+  position:relative;
+  padding:13px 15px 13px 43px;
+  border-radius:13px;
+  background:#0c1422;
+  border:1px solid #1d2a40;
+  color:#dce3ee;
+}
+.checklist li:before{
+  content:"✓";
+  position:absolute;
+  left:15px;
+  top:10px;
+  color:#20d568;
+  font-weight:900;
+  font-size:20px;
+}
+.steps{margin:0;padding-left:22px;color:#dce3ee}
+.steps li{padding:7px 0}
+.audience{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+.audience .card strong{display:block;margin-bottom:5px}
+.price{
+  text-align:center;
+  background:linear-gradient(180deg,#111c2e,#0e1726);
+}
+.price .label{
+  color:#9da9bb;
+  font-size:15px;
+  margin-bottom:2px;
+}
+.price strong{
+  display:block;
+  font-size:clamp(48px,10vw,66px);
+  line-height:1;
+  margin:10px 0 10px;
+}
+.price p{color:#aeb9ca;margin:0 auto 22px;max-width:600px}
+.faq{background:#0e1726}
+.faq-item{
+  padding:18px 0;
+  border-bottom:1px solid #1e2a3e;
+}
+.faq-item:last-child{border-bottom:0}
+.faq-item h3{font-size:17px;margin:0 0 6px}
+.faq-item p{color:#b9c2d1;margin:0}
+.support{
+  text-align:center;
+  color:#9ba7b9;
+}
+.support a{color:#59c9ff}
+footer{
+  text-align:center;
+  padding:28px 20px 92px;
+  color:#778398;
+  font-size:13px;
+}
+.sticky{
+  display:none;
+  position:fixed;
+  left:12px;
+  right:12px;
+  bottom:12px;
+  z-index:50;
+  text-align:center;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.sticky a{
+  width:100%;
+  min-height:54px;
+}
+@media(max-width:700px){
+  .hero{padding:40px 18px 36px}
+  section{padding:27px 20px;margin:17px 0;border-radius:20px}
+  .grid,.audience{grid-template-columns:1fr}
+  .hero p{font-size:16px}
+  .cta{width:100%;font-size:17px}
+  .sticky{display:block}
+  footer{padding-bottom:105px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+  <div class="badge">EDIÇÃO 2026</div>
+  <h1>VENDA COM IA</h1>
+  <h2>Aprenda a usar Inteligência Artificial para estruturar sua primeira oferta digital — mesmo começando do zero.</h2>
+  <p>Um guia prático com modelos para produto, oferta, página, anúncios, WhatsApp e organização da operação.</p>
+
+  <a class="cta" href="https://mpago.la/23fEvhW" target="_blank" rel="noopener noreferrer" aria-label="Ir para o checkout do Venda com IA">
+    QUERO ACESSAR AGORA
+  </a>
+
+  <div class="note">Pagamento processado pelo Mercado Pago. Confira preço, condições e forma de acesso diretamente no checkout.</div>
+
+  <div class="trust" aria-label="Informações da oferta">
+    <span>Material digital</span>
+    <span>Modelos práticos</span>
+    <span>Para iniciantes</span>
+  </div>
+</header>
+
+<main class="container">
+
+<section>
+  <h2>O que você recebe</h2>
+  <div class="grid">
+    <div class="card"><h3>📘 Guia principal</h3><p>Passo a passo para estruturar sua operação e transformar uma ideia em uma oferta organizada.</p></div>
+    <div class="card"><h3>🤖 Prompts de IA</h3><p>Modelos prontos para adaptar em conteúdo, oferta, comunicação e marketing.</p></div>
+    <div class="card"><h3>✍️ Headlines</h3><p>Modelos de títulos e chamadas para você adaptar às suas páginas e anúncios.</p></div>
+    <div class="card"><h3>💬 WhatsApp</h3><p>Scripts para organizar atendimento, respostas e pós-venda.</p></div>
+    <div class="card"><h3>✅ Checklist</h3><p>Lista prática para organizar as etapas antes de divulgar sua oferta.</p></div>
+    <div class="card"><h3>💰 Precificação</h3><p>Modelo para organizar custos, preço e margem antes de colocar sua oferta no mercado.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Para quem é este material?</h2>
+  <div class="audience">
+    <div class="card"><strong>Quem está começando</strong><p>Para quem ainda não sabe como transformar uma ideia em uma oferta digital estruturada.</p></div>
+    <div class="card"><strong>Quem quer usar IA no negócio</strong><p>Para quem quer aproveitar ferramentas de IA para acelerar criação e organização.</p></div>
+    <div class="card"><strong>Quem vende pela internet</strong><p>Para quem precisa melhorar oferta, comunicação, página e atendimento.</p></div>
+    <div class="card"><strong>Quem quer um roteiro prático</strong><p>Para quem prefere seguir uma sequência de tarefas em vez de começar sem direção.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>O que você vai colocar em prática</h2>
+  <ul class="checklist">
+    <li>Estruturar uma oferta digital de forma organizada.</li>
+    <li>Usar prompts para acelerar criação de conteúdo e marketing.</li>
+    <li>Montar uma página com uma comunicação mais clara.</li>
+    <li>Preparar mensagens para atendimento pelo WhatsApp.</li>
+    <li>Organizar preço, custos e etapas de divulgação.</li>
+    <li>Testar a oferta e acompanhar os resultados.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Como funciona</h2>
+  <ol class="steps">
+    <li>Você acessa o checkout pelo botão da página.</li>
+    <li>Confere o produto, preço e condições antes de comprar.</li>
+    <li>Após a compra, segue as condições de acesso apresentadas no checkout.</li>
+    <li>Estuda o material e adapta os modelos ao seu negócio.</li>
+    <li>Testa sua oferta e acompanha as métricas.</li>
+  </ol>
+</section>
+
+<section class="price">
+  <div class="label">INVESTIMENTO</div>
+  <strong>R$ 37,90</strong>
+  <p>Confira o valor final e todas as condições diretamente no checkout.</p>
+  <a class="cta" href="https://mpago.la/23fEvhW" target="_blank" rel="noopener noreferrer" aria-label="Comprar Venda com IA por R$ 37,90">
+    QUERO COMPRAR AGORA
+  </a>
+  <div class="note">Checkout processado pelo Mercado Pago.</div>
+</section>
+
+<section class="faq">
+  <h2>Perguntas frequentes</h2>
+
+  <div class="faq-item">
+    <h3>É curso em vídeo?</h3>
+    <p>Não. A oferta atual é composta por materiais digitais e modelos práticos.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Preciso saber usar IA?</h3>
+    <p>Não. O material foi pensado para iniciantes e apresenta modelos para adaptação.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>O resultado é garantido?</h3>
+    <p>Não. Resultados dependem de fatores como execução, oferta, público, orçamento, mercado e estratégia.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Como faço a compra?</h3>
+    <p>Toque em qualquer botão de compra e você será direcionado ao checkout do Mercado Pago para conferir as condições da oferta.</p>
+  </div>
+</section>
+
+<section class="support">
+  <h2>Precisa de suporte?</h2>
+  <p>Se tiver alguma dúvida sobre a oferta, entre em contato pelo e-mail:</p>
+  <p><a href="mailto:adonai012026@gmail.com">adonai012026@gmail.com</a></p>
+</section>
+
+</main>
+
+<footer>
+  © 2026 Venda com IA · Material digital ·
+  <a href="mailto:adonai012026@gmail.com">Suporte</a>
+</footer>
+
+<div class="sticky">
+  <a class="cta" href="https://mpago.la/23fEvhW" target="_blank" rel="noopener noreferrer">
+    QUERO ACESSAR AGORA — R$ 37,90
+  </a>
+</div>
+
+</body>
+</html>
